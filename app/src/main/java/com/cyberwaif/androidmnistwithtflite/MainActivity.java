@@ -162,6 +162,11 @@ public class MainActivity extends Activity implements View.OnTouchListener {
     private void onDetectClicked() {
         float pixels[] = mDrawView.getPixelData();
 
+        //should be same format with train
+        for(int i = 0; i < pixels.length; i++){
+            pixels[i] = pixels[i]/255;
+        }
+
         for(int i = 0; i<28; i++){
             float[] a = Arrays.copyOfRange(pixels, i*28, i*28+28);
             Log.v(TAG,  Arrays.toString(a));
