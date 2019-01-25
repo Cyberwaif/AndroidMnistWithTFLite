@@ -13,7 +13,7 @@ import datetime
 import read_local_mnist
 
 
-epochs_time = 2
+epochs_time = 100
 
 #
 # def load_mnist(path, kind='train'):
