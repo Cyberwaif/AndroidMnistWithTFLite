@@ -110,6 +110,10 @@ public class MainActivity extends Activity implements View.OnTouchListener {
     @Override
     protected void onPause() {
         mDrawView.onPause();
+        if(mTFLite != null) {
+            mTFLite.release();
+            mTFLite = null;
+        }
         super.onPause();
     }
 

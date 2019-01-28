@@ -104,4 +104,8 @@ public class KerasTFLite {
         }
         return maxID;
     }
+
+    public void release() {
+        mInterpreter.close();
+    }
 }
