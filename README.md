@@ -2,6 +2,10 @@
 
 ## Python部分
 
+训练模型来源于TensorFlow的[basic_classification](https://www.tensorflow.org/tutorials/keras/basic_classification)示例，使用TensorFlow Keras API。
+
+为了能够更好的在Android手机上呈现并供用户测试，训练模型里使用MNIST，而非basic classification示例里的Fashion MNIST。
+
 本项目python源码位于根目录[python_code](https://github.com/Cyberwaif/AndroidMnistWithTFLite/tree/master/python_code)路径下。
 
 ```shell
@@ -9,7 +13,7 @@ python keras_mnist_train.py
 ```
 
 **注意：** 考虑到网络问题，请自行下载MNIST数据，并配置好路径
-训练时会先将图像数据数值范围从0~255转为0~1，预测时需要对待测数据做同样处理。
+训练时会先将图像数据数值范围从0-255转为0-1，预测时需要对待测数据做同样处理。
 ```python
 # you can download mnist from http://yann.lecun.com/exdb/mnist/
 train_images = read_local_mnist.load_train_images('input_data/train-images.idx3-ubyte')
@@ -32,10 +36,6 @@ python convert.py keras_mnist_model.h5
 ## Android部分
 
 UI逻辑来源于[MindOrks](https://github.com/MindorksOpenSource)的[AndroidTensorFlowMNISTExample](https://github.com/MindorksOpenSource/AndroidTensorFlowMNISTExample)
-
-训练模型来源于TensorFlow的[basic_classification](https://www.tensorflow.org/tutorials/keras/basic_classification)示例，使用TensorFlow Keras API。
-
-为了能够更好的在Android手机上呈现并供用户测试，训练模型里使用MNIST，而非basic classification示例里的Fashion MNIST。
 
 核心代码就是以下一小段：
 
